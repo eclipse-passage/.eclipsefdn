@@ -17,6 +17,14 @@ orgs.newOrg('eclipse-passage') {
       ],
       secret: "********",
     },
+    orgs.newOrgWebhook('https://ci.eclipse.org/passage/github-webhook/') {
+      events+: [
+        "pull_request",
+        "pull_request_review_comment",
+        "push",
+        "repository"
+      ],
+    },
   ],
   _repositories+:: [
     orgs.newRepo('.github') {
