@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-passage') {
+orgs.newOrg('technology.passage', 'eclipse-passage') {
   settings+: {
     web_commit_signoff_required: false,
     workflows+: {
