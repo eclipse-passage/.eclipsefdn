@@ -92,6 +92,11 @@ orgs.newOrg('technology.passage', 'eclipse-passage') {
           requires_strict_status_checks: true,
         },
       ],
+      secrets: [
+        orgs.newRepoSecret('PASSAGE_BOT_PAT') {
+          value: "pass:bots/technology.passage/github.com/token-hd6531",
+        },
+      ],
     },
     orgs.newRepo('passage-docs') {
       allow_merge_commit: true,
